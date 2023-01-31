@@ -5,32 +5,38 @@ CHARACTERS = {
 		create_character = {
 			# Mahmud II of the Ottoman Empire
 			#role = politician # Remove this line
-			first_name = Mahmut
+			first_name = Mahmud
 			last_name = Osmanoglu
 			ruler = yes
 			birth_date = 1785.7.20
 			dna = dna_mahmud_02
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Mahmut_Osmanoglu
 				ambitious
+			}
+			on_created = {
+				set_variable = {
+					name = is_mahmud_ii
+				}				
 			}
 		}
 
 		create_character = {
 			#role = politician # Remove this line
-			first_name = Abdulmecid
+			first_name = Abdulmejid
 			last_name = Osmanoglu
 			heir = yes
 			birth_date = 1823.4.25
 			interest_group = ig_intelligentsia
-			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
+			ideology = ideology_reformer
 			traits = {
-				concept_wikipedia_Abdulmecid_Osmanoglu
 				persistent
+			}
+			on_created = {
+				set_variable = {
+					name = is_abdulmejid_i
+				}				
 			}
 		}
 
@@ -44,9 +50,7 @@ CHARACTERS = {
 			ig_leader = yes
 			interest_group = ig_landowners
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Mehmet_Emin_Rauf_Pasha
 				cautious
 			}
 		}
@@ -59,9 +63,7 @@ CHARACTERS = {
 			ig_leader = yes
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Mustafa_Reshid_Pasha
 				experienced_political_operator
 				experienced_diplomat
 				persistent
@@ -77,9 +79,7 @@ CHARACTERS = {
 			culture = cu:albanian
 			interest_group = ig_rural_folk
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Mustafa_Bushatli
 				imperious
 			}
 		}	
@@ -92,9 +92,7 @@ CHARACTERS = {
 			ig_leader = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Koca_Huesrev_Pasha
 			}
 		}
 		# also worth considering Ağa Hüseyin Paşa, age 60
@@ -120,9 +118,7 @@ CHARACTERS = {
 			age = 74
 			ig_leader = yes
 			interest_group = ig_devout
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Mustafa_Asim_Mekkizade
 				tactful
 			}
 		}
@@ -134,9 +130,7 @@ CHARACTERS = {
 			age = 56
 			hq = region_balkans
 			commander_rank = commander_rank_3
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Resid_Mehmed_Pasha
 				mountain_commander
 				cruel
 			}
@@ -149,9 +143,7 @@ CHARACTERS = {
 			age = 29
 			hq = region_anatolia
 			commander_rank = commander_rank_3
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_abdulkerim_nadir_Pasha
 				cruel
 				basic_offensive_planner
 			}
@@ -165,9 +157,7 @@ CHARACTERS = {
 			hq = region_anatolia
 			commander_rank = commander_rank_3
 			age = 42
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Yaver_Pasha
 				basic_diplomat
 				basic_naval_commander
 			}
@@ -192,9 +182,7 @@ CHARACTERS = {
 			ideology = ideology_royalist
 			birth_date = 1790.2.11 # Unsure of birth date, approxiamate age based on portraits.
 			hq = region_caucasus
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Hafiz_Osman_Pasha
 				reckless
 				basic_defensive_strategist
 			}
@@ -210,9 +198,7 @@ CHARACTERS = {
 			ideology = ideology_royalist
 			birth_date = 1806.9.24
 			hq = region_arabic
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Omer_Lutfi_Pasha
 				meticulous
 				charismatic
 				experienced_offensive_planner

@@ -22,11 +22,61 @@ oregon.2 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
 				save_scope_as = washington_scope
+			}
+		}
+		s:STATE_MONTANA = {
+			random_scope_state = {
+				limit = {
+					owner = {
+						OR = {
+							c:GBR = THIS
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
+						}
+					}
+				}
+				save_scope_as = montana_scope
+			}
+		}
+		s:STATE_WYOMING = {
+			random_scope_state = {
+				limit = {
+					owner = {
+						OR = {
+							c:GBR = THIS
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
+						}
+					}
+				}
+				save_scope_as = wyoming_scope
 			}
 		}
 		s:STATE_IDAHO = {
@@ -35,7 +85,15 @@ oregon.2 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -48,7 +106,15 @@ oregon.2 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -80,7 +146,15 @@ oregon.2 = {
 						owner = {
 							OR = {
 								c:GBR = THIS
-								is_subject_of = c:GBR
+								OR = {
+									is_subject_of = c:GBR
+									AND = {
+										is_subject_of = c:HBC
+										c:HBC = {
+											is_subject_of = c:GBR
+										}
+									}
+								}
 							}
 						}
 					}
@@ -94,7 +168,15 @@ oregon.2 = {
 						owner = {
 							OR = {
 								c:GBR = THIS
-								is_subject_of = c:GBR
+								OR = {
+									is_subject_of = c:GBR
+									AND = {
+										is_subject_of = c:HBC
+										c:HBC = {
+											is_subject_of = c:GBR
+										}
+									}
+								}
 							}
 						}
 					}
@@ -108,88 +190,63 @@ oregon.2 = {
 						owner = {
 							OR = {
 								c:GBR = THIS
-								is_subject_of = c:GBR
+								OR = {
+									is_subject_of = c:GBR
+									AND = {
+										is_subject_of = c:HBC
+										c:HBC = {
+											is_subject_of = c:GBR
+										}
+									}
+								}
 							}
 						}
 					}
 					set_state_owner = c:USA
 				}
 			}
-		}
-		if = {
-			limit = {
-				exists = c:COL
-				c:COL = {
-					is_subject_of = c:GBR
-					NOT = {
-						country_has_primary_culture = cu:anglo_canadian
-					}
-					country_has_primary_culture = cu:british
-				}
-			}
-			c:COL = {
-				add_primary_culture = cu:anglo_canadian
-				remove_primary_culture = cu:british
-			}
-		}
-		if = {
-			limit = {
-				exists = c:COL
-				c:COL = {
-					is_subject_of = c:GBR
-				}
-				any_subject_or_below = {
-					OR = {
-						country_has_primary_culture = cu:anglo_canadian
-						country_has_primary_culture = cu:franco_canadian
-					}
-				}
-			}
-			remove_diplomatic_pact = {
-				country = c:COL
-				type = puppet
-			}
-			if = {
-				limit = {
-					exists = c:HBC
-					c:HBC = {
-						is_subject_of = c:GBR
-					}
-				}
-				c:HBC = {
-					create_diplomatic_pact = {
-						country = c:COL
-						type = puppet
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					exists = c:CAN
-					c:CAN = {
-						is_subject_of = c:GBR
-					}
-				}
-				c:CAN = {
-					create_diplomatic_pact = {
-						country = c:COL
-						type = puppet
-					}
-				}
-			}
-			else = {
-				random_country = {
+			s:STATE_WYOMING = {
+				random_scope_state = {
 					limit = {
-						is_subject_of = c:GBR
-						OR = {
-							country_has_primary_culture = cu:anglo_canadian
-							country_has_primary_culture = cu:franco_canadian
+						exists = c:GBR
+						owner = {
+							OR = {
+								c:GBR = THIS
+								OR = {
+									is_subject_of = c:GBR
+									AND = {
+										is_subject_of = c:HBC
+										c:HBC = {
+											is_subject_of = c:GBR
+										}
+									}
+								}
+							}
 						}
 					}
-					create_diplomatic_pact = {
-						country = c:COL
-						type = puppet
+					set_state_owner = c:USA
+				}
+			}
+			s:STATE_MONTANA = {
+				random_scope_state = {
+					limit = {
+						exists = c:GBR
+						owner = {
+							OR = {
+								c:GBR = THIS
+								OR = {
+									is_subject_of = c:GBR
+									AND = {
+										is_subject_of = c:HBC
+										c:HBC = {
+											is_subject_of = c:GBR
+										}
+									}
+								}
+							}
+						}
 					}
+					set_state_owner = c:USA
 				}
 			}
 		}
@@ -240,7 +297,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -254,7 +319,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -268,7 +341,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -290,7 +371,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -305,7 +394,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -320,7 +417,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -335,7 +440,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}
@@ -350,7 +463,15 @@ oregon.3 = {
 					owner = {
 						OR = {
 							c:GBR = THIS
-							is_subject_of = c:GBR
+							OR = {
+								is_subject_of = c:GBR
+								AND = {
+									is_subject_of = c:HBC
+									c:HBC = {
+										is_subject_of = c:GBR
+									}
+								}
+							}
 						}
 					}
 				}

@@ -11,13 +11,14 @@
     		religion = rel:protestant
 			interest_group = ig_landowners
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Karl_Johan_Bernadotte
 				ambitious 
 			}
 			on_created = {
 				set_variable = is_married
+				set_variable = {
+					name = is_johan
+				}	
 			}
 		}	
 
@@ -31,9 +32,7 @@
     		religion = rel:protestant
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Oscar_Bernadotte
 				romantic
 			}
 			on_created = {
@@ -49,9 +48,7 @@
 			ig_leader = yes
 			interest_group = ig_landowners
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Otto_Palmstierna
 				meticulous
 				basic_political_operator
 			}
@@ -65,9 +62,7 @@
 			ig_leader = yes
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Jacob_De_la_Gardie
 				innovative
 			}
 		}
@@ -81,9 +76,7 @@
 			ig_leader = yes
 			interest_group = ig_rural_folk
 			ideology = ideology_royalist
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Anders_Danielsson
 				persistent			
 				inspirational_orator # granted, other people wrote his speeches, but he apparently delivered them well		
 				expensive_tastes
@@ -98,9 +91,7 @@
 			ig_leader = yes
 			interest_group = ig_petty_bourgeoisie
 			ideology = ideology_moderate
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Anders_Ericsson
 				direct
 				tactful
 				cautious
@@ -115,9 +106,7 @@
 			ig_leader = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_royalist
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Magnus_Brahe
 				ambitious
 				basic_political_operator
 			}
@@ -131,9 +120,7 @@
 			ig_leader = yes
 			interest_group = ig_industrialists
 			ideology = ideology_market_liberal
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Lars_Johan_Hierta
 				meticulous
 				inspirational_orator
 			}
@@ -147,9 +134,7 @@
 			ig_leader = yes
 			interest_group = ig_devout
 			ideology = ideology_traditionalist
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Carl_Fredrik_af_Wingard
 				arrogant
 			}
 		}
@@ -159,9 +144,7 @@
 			first_name = "Carl"
 			last_name = "Nordenskiold"
 			birth_date = 1791.6.22
-			trait_generation = { set_variable = historical_figure }
 			traits = {			
-				concept_wikipedia_Carl_Nordenskiold
 				ambitious
 				experienced_naval_commander
 			}
@@ -187,9 +170,7 @@
 			last_name = Morner
 			age = 62
 			interest_group = ig_armed_forces
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Axel_Morner
 				romantic
 			}
 		}

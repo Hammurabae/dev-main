@@ -9,9 +9,7 @@
 			age = 22
 			interest_group = ig_landowners
 			ideology = ideology_pacifist
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Kamehameha_III_Kamehameha
 				direct
 				innovative
 			}
@@ -26,9 +24,7 @@
 			age = 2
 			interest_group = ig_landowners
 			ideology = ideology_theocrat
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Kamehameha_IV_Kamehameha
 				tactful
 			}
 		}
@@ -42,11 +38,23 @@
 			age = 39
 			interest_group = ig_devout
 			ideology = ideology_theocrat
-			trait_generation = { set_variable = historical_figure }
 			traits = {
-				concept_wikipedia_Asa_Thurston
 				reserved
 			}
 		}
+		create_character = {
+			# David Malo
+			#role = politician # Remove this line
+			first_name = "Davida" #As all Hawaiian names ended with a vowel, it cannot be David, so the native name Davida is the next best thing
+			last_name = "Malo"
+			ig_leader = yes
+			age = 41
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate
+			traits = {
+				romantic
+				innovative
+			}
+		}	
 	}
 }

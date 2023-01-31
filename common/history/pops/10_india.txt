@@ -633,6 +633,10 @@
 				size = 18520
 			}
 			create_pop = {
+				culture = anglo_indian
+				size = 1852
+			}
+			create_pop = {
 				pop_type = slaves
 				culture = bengali
 				religion = hindu
@@ -932,6 +936,7 @@
 			}
 			create_pop = {
 				culture = kannada
+				religion = sunni
 				size = 326095
 			}
 			create_pop = {
@@ -952,6 +957,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = kannada
+				religion = sunni
 				size = 10000
 			}
 		}
@@ -960,32 +966,34 @@
 		region_state:MYS = {
 			create_pop = {
 				culture = kannada
-				religion = hindu
 				size = 2332290
 			}
 			create_pop = {
 				culture = kannada
+				religion = sunni
 				size = 133290
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = kannada
+				religion = sunni
 				size = 20000
 			}
 		}
 		region_state:BIC = {
 			create_pop = {
 				culture = kannada
-				religion = hindu
 				size = 1320582
 			}
 			create_pop = {
 				culture = kannada
+				religion = sunni
 				size = 127438
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = kannada
+				religion = sunni
 				size = 60000
 			}
 		}
@@ -1080,7 +1088,12 @@
 				size = 30369
 			}
 			create_pop = {
+				culture = anglo_indian
+				size = 3036
+			}
+			create_pop = {
 				culture = kannada
+				religion = sunni
 				size = 871981
 			}
 			create_pop = {
@@ -1101,6 +1114,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = kannada
+				religion = sunni
 				size = 34000
 			}
 		}
@@ -1126,7 +1140,6 @@
 			}
 			create_pop = {
 				culture = kannada
-				religion = hindu
 				size = 1164904
 			}
 			create_pop = {
@@ -1147,6 +1160,7 @@
 			create_pop = {
 				pop_type = slaves
 				culture = kannada
+				religion = sunni
 				size = 60000
 			}
 		}
@@ -1179,7 +1193,6 @@
 			}
 			create_pop = {
 				culture = kannada
-				religion = hindu
 				size = 2032854
 			}
 			create_pop = {
@@ -1192,6 +1205,7 @@
 			}
 			create_pop = {
 				culture = kannada
+				religion = sunni
 				size = 409975
 			}
 			create_pop = {

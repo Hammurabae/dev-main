@@ -9,7 +9,9 @@ usa_lincoln_character_template = {
     interest_group = ig_petty_bourgeoisie
     birth_date = 1809.2.12
     dna = dna_abraham_lincoln
+    trait_generation = { set_variable = historical_figure }
     traits = {
+    	concept_wikipedia_Abraham_Lincoln
         experienced_political_operator
         inspirational_orator
         tactful

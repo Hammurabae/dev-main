@@ -1,4 +1,4 @@
-DIPLOMACY = {
+﻿DIPLOMACY = {
 	c:AUS = {	
 		create_diplomatic_pact = {
 			country = c:MOD
@@ -91,22 +91,6 @@ DIPLOMACY = {
 			country = c:ALN
 			type = customs_union
 		}
-		create_diplomatic_pact = {
-			country = c:HHN
-			type = customs_union
-		}
-		create_diplomatic_pact = {
-			country = c:WLD
-			type = customs_union
-		}
-		create_diplomatic_pact = {
-			country = c:LIP
-			type = customs_union
-		}
-		create_diplomatic_pact = {
-			country = c:SCM
-			type = customs_union
-		}
 	}
 	# Steuerverein
 	c:GBR = {	
@@ -124,6 +108,18 @@ DIPLOMACY = {
 		}
 		create_diplomatic_pact = {
 			country = c:BRA
+			type = customs_union
+		}
+	}
+	c:SPA = {	
+		create_diplomatic_pact = {
+			country = c:ANR
+			type = customs_union
+		}
+	}
+	c:SWI = {	
+		create_diplomatic_pact = {
+			country = c:LIE
 			type = customs_union
 		}
 	}

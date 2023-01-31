@@ -39,12 +39,39 @@ south_america.1 = {
 				value = 0.33
 			}
 		}
-		annex = c:PEU
+		if = {
+			limit = { 
+				exists = c:PEU
+				c:BOL= {
+					has_diplomatic_pact = {
+						who = c:PEU
+						type = puppet
+						is_initiator = yes
+					}
+				} 
+			}
+			c:BOL = {
+            annex = c:PEU
+        	}
+		}
+		if = {
+			limit = { 
+				exists = c:NEU
+				c:BOL= {
+					has_diplomatic_pact = {
+						who = c:NEU
+						type = puppet
+						is_initiator = yes
+					}
+				} 
+			}
+			c:BOL = {
+            annex = c:NEU
+        	}
+		}
 		ai_chance = {
 			base = 1
 		}
-
-		activate_law = law_type:law_dual_federalism
 	}
 
 	option = { #No
@@ -80,7 +107,6 @@ south_america.2 = {
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
 	trigger = {
-		exists = c:PEU
 		c:PEU = {
 			is_player = no
 		}
@@ -94,8 +120,20 @@ south_america.2 = {
 
 	option = { #Yes
 		name = south_america.2.a
+
+		c:PEU = {
+			trigger_event = { id = journal_flavor_peru.1 }
+		}
+        change_relations = {
+			country = c:CHL
+			value = -100
+		}
+		change_relations = {
+			country = c:ARG
+			value = -100
+		}
 		create_incident = {
-			value = 50
+			value = 52.5
 			country = c:PEU
 		}
 		create_diplomatic_pact = {
