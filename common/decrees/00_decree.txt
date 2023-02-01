@@ -731,6 +731,7 @@ decree_penal_colony = {
 			NOT = {
 				has_law = law_no_colonial_affairs
 			}
+			is_player = yes
 		}
 		is_isolated_from_market = no
 	}
@@ -740,7 +741,7 @@ decree_penal_colony = {
 		state_migration_pull_mult = -0.75
 		building_throughput_mult = -0.1
 		state_loyalists_from_sol_change_mult = 0.1
-		political_movement_radicalism_add = -0.05
+		#political_movement_radicalism_add = -0.05
 		state_turmoil_effects_mult = -0.1
 		state_political_strength_from_wealth_mult = 0.1
 		state_political_strength_from_welfare_mult = -0.1
@@ -749,10 +750,10 @@ decree_penal_colony = {
 	unlocking_technologies = {
 		colonization
 	}
-	cost = 75
-	valid = {
-		is_player = yes
+	ai_weight = {
+		value = 0
 	}
+	cost = 75
 }
 
 decree_military_training = {

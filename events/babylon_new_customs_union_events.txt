@@ -1,0 +1,83 @@
+namespace = babylon_new_customs_union
+babylon_new_customs_union.1 = {
+	#Ends the customs union play if nobody joined against it, and nobody can join it no more
+	#Fires weekly while diplo play is active, for the overlord
+	hidden = yes
+	type = country_event
+	trigger = {
+		has_variable = babylon_new_customs_union_overlord
+		any_diplomatic_play = {
+			initiator_is = root
+			escalation >= 80
+			is_diplomatic_play_type = dp_customs_union
+			target = {
+				has_variable = babylon_new_customs_union_applicant
+			}
+		}
+	}
+	immediate = {
+		random_diplomatic_play = {
+			limit = {
+				initiator_is = root
+				escalation >= 80
+				is_diplomatic_play_type = dp_customs_union
+				target = {
+					has_variable = babylon_new_customs_union_applicant
+				}
+			}
+			target = {
+				remove_variable = babylon_new_customs_union_applicant
+			}
+			end_play = yes
+		}
+		remove_variable = babylon_new_customs_union_overlord
+	}
+}
+
+babylon_new_customs_union.2 = {
+	#Fires on customs union war end (for overlord??)
+	hidden = yes
+	type = country_event
+	trigger = {
+		has_variable = babylon_new_customs_union_overlord
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_diplomatic_pact = {
+					who = root
+					type = customs_union
+				}
+				has_variable = babylon_new_customs_union_applicant
+			}
+			save_scope_as = applicant_scope
+		}
+		random_country = {
+			limit = {
+				has_truce_with = root
+				has_variable = babylon_new_customs_union_objector
+			}
+			save_scope_as = objector_scope
+		}
+		scope:applicant_scope = {
+			remove_diplomatic_pact = {
+				country = root
+				type = customs_union
+			}
+			create_truce = {
+				country = root
+				months = 60 #5 years, standard
+			}
+			set_variable = {
+				name = babylon_new_customs_union_applicant_denied
+				value = 1
+				days = 1826 #5 years
+			}
+			remove_variable = babylon_new_customs_union_applicant
+		}
+		scope:objector_scope = {
+			remove_variable = babylon_new_customs_union_objector
+		}
+		remove_variable = babylon_new_customs_union_overlord
+	}
+}

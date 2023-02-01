@@ -1,0 +1,71 @@
+# Root = Diplomatic Play
+on_diplo_play_back_down = {
+	effect = {
+		if = {
+			#If overlord backs down, at any point
+			limit = {
+				is_diplomatic_play_type = dp_customs_union
+				initiator = scope:actor
+			}
+			random_scope_play_involved = {
+				limit = {
+					has_variable = babylon_new_customs_union_applicant
+				}
+				remove_diplomatic_pact = {
+					country = initiator
+					type = customs_union
+				}
+				remove_variable = babylon_new_customs_union_applicant
+			}
+			remove_variable = babylon_new_customs_union_overlord
+			random_scope_play_involved = {
+				limit = {
+					has_variable = babylon_new_customs_union_objector
+				}
+				remove_variable = babylon_new_customs_union_objector
+			}
+		}
+		if = {
+			#If applicant backs down, while its target
+			limit = { 
+				is_diplomatic_play_type = dp_customs_union
+				target = scope:actor
+			}
+			remove_diplomatic_pact = {
+				country = initiator
+				type = customs_union
+			}
+			remove_variable = babylon_new_customs_union_applicant
+			initiator = {
+				remove_variable = babylon_new_customs_union_overlord
+			}
+		}
+	}
+}
+
+# Root = Diplomatic Play
+on_diplo_play_join_side = {
+	effect = {
+		if = {
+			limit = {
+				is_diplomatic_play_type = dp_customs_union
+				any_scope_target_ally = {
+					this = scope:notification_target
+				}
+			}
+			add_war_goal = {
+				holder = initiator
+				country = scope:notification_target
+				type = humiliation
+			}
+			add_initiator_backers = {
+				target
+			}
+			scope:notification_target = {
+				#This variable is not yet used, is here just in case. 
+				#Remove if found unnecessary
+				set_variable = babylon_new_customs_union_objector
+			}
+		}
+	}
+}
