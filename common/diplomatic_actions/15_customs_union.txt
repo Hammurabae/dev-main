@@ -98,43 +98,24 @@
 		}
 		if = {
 			limit = {
-				#Either... 
-				#Is both North German
-				#Is both same culture and has nationalism
-				#Same culture group and has pan-nationalism
-				#To go on without a diplo play
-				NOR = {
-					AND = {
-						country_has_primary_culture = cu:north_german
-						scope:target_country = cu:north_german
-					}
-					AND = {
-						has_technology_researched = nationalism
-						any_primary_culture = {
-							is_primary_culture_of = scope:target_country
-						}
-						scope:target_country = {
-							has_technology_researched = nationalism
-						}
-					}
-					AND = {
-						has_technology_researched = pan-nationalism
-						any_primary_culture = {
-							shares_heritage_and_other_trait_with_any_primary_culture = scope:target_country
-						}
-						scope:target_country = {
-							has_technology_researched = pan-nationalism
-						}
-					}
+				babylon_new_customs_union_valid_without_diplo_play = no
+			}
+			add_to_variable_list = {
+				name = babylon_new_customs_union_overlord
+				target = scope:target_country
+			}
+			scope:target_country = {
+				add_to_variable_list = {
+					name = babylon_new_customs_union_applicant
+					target = root
 				}
 			}
-			create_diplomatic_play = {
-				type = dp_customs_union
-				target_country = scope:target
-			}
-			set_variable = babylon_new_customs_union_overlord
-			scope:target = {
-				set_variable = babylon_new_customs_union_applicant
+			hidden_effect = {
+				trigger_event = {
+					#Cannot be fired instantly
+					id = babylon_new_customs_union.3
+					days = 1
+				}
 			}
 		}
 	}
@@ -699,6 +680,28 @@ join_customs_union = {
 				type = trade_agreement
 			}
 		}
+		if = {
+			limit = {
+				babylon_new_customs_union_valid_without_diplo_play = no
+			}
+			add_to_variable_list = {
+				name = babylon_new_customs_union_applicant
+				target = scope:target_country
+			}
+			scope:target_country = {
+				add_to_variable_list = {
+					name = babylon_new_customs_union_overlord
+					target = root
+				}
+				hidden_effect = {
+					trigger_event = {
+						#Cannot be fired instantly
+						id = babylon_new_customs_union.3
+						days = 1
+					}
+				}
+			}
+		}
 	}
 	ai = {
 		check_acceptance_for_will_propose = yes
@@ -782,6 +785,28 @@ change_customs_union = {
 			remove_diplomatic_pact = {
 				country = scope:target_country
 				type = trade_agreement
+			}
+		}
+		if = {
+			limit = {
+				babylon_new_customs_union_valid_without_diplo_play = no
+			}
+			add_to_variable_list = {
+				name = babylon_new_customs_union_overlord
+				target = scope:target_country
+			}
+			scope:target_country = {
+				add_to_variable_list = {
+					name = babylon_new_customs_union_applicant
+					target = root
+				}
+			}
+			hidden_effect = {
+				trigger_event = {
+					#Cannot be fired instantly
+					id = babylon_new_customs_union.3
+					days = 1
+				}
 			}
 		}
 	}
