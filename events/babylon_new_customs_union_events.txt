@@ -113,19 +113,3 @@ babylon_new_customs_union.3 = {
 		}
 	}
 }
-babylon_new_customs_union.4 = {
-	type = country_event
-	event_image = {
-		video = "gfx/event_pictures/unspecific_vandalized_storefront.bk2"
-	}
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/vandalized_storefront"
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-	title = infamy_rebalance.4.t
-	desc = infamy_rebalance.4.d
-	flavor = infamy_rebalance.4.f
-	duration = 3
-	option = {
-		name = "war fired for you"
-	}
-}
