@@ -202,7 +202,7 @@ dred_scott_for_sand_mod:0 "The Dred Scott Decision - Sandford"
 
  #Garib
  employ_Garibaldi_dec:0 "Employ Garibaldi"
- employ_Garibaldi_dec_desc:0 "Employ the Italian freedom fighter Garibaldi as a general. He was last hired in [SCOPE.sCountry('garibaldi_hire_scope').GetName]"
+ employ_Garibaldi_dec_desc:0 "Employ the Italian freedom fighter Garibaldi as a general. He was last hired in [GetGlobalVariable('garibaldi_hire_scope').GetCountry.GetNameNoFlag]."
  garibaldi_busy_var:0 "Garibaldi is busy"
  garibaldi_busy_var:0 "Garibaldi has died"
 
@@ -471,7 +471,7 @@ acw_modded.4.a:0 "God damn them!"
 lawgroup_officers:0 "Officer Commissions"
 law_noble_officers:0 "Aristocratic Commissions"
 law_purchased_officers:0 "Purchased Commissions"
-law_professional_officers:0 "Professional Commissions "
+law_professional_officers:0 "Professional Commissions"
 law_popular_officers:0 "Elected Commissions"
 law_political_bureaucrats:0 "Political Bureaucrats" 
 law_meritocratic_bureaucrats:0 "Meritocratic Bureaucrats"

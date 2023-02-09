@@ -71,9 +71,10 @@ template map_list_panels {
 	activate_conscription_center_map_list_panel = {}
 	front_map_list_panel = {}
 	recruit_commanders_map_list_panel = {}
+	#players_map_list_panel = {}
 }
  
- 
+
 widget = {
 	size = { 100% 100% }
 	name = "ingame_hud"
